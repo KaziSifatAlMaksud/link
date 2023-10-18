@@ -15,7 +15,7 @@
         <div class="header-content">
             <div class="headerbody">
                 <div class="back-button">
-                    <a href="#" class="back-link">
+                    <a href="invoice_page.html" class="back-link">
                         <i class="fa-solid fa-angle-left"></i> Back
                     </a>
                 </div>
@@ -41,17 +41,16 @@
       
            
         <form>
-            <fieldset>
-
+            <fieldset class="m-3">
                 <div class="row mb-3 mt-3">
                     <div class="col-2 d-flex align-items-center justify-content-center">
                         <label class="form-label"> To : </label>
                     </div>
                     <div class="col-5">
-                        <input type="text" class="form-control" value="">
+                        <input type="text"  class="custom-input"  value="">
                     </div>
                     <div class="col-5 d-flex align-items-center justify-content-center">
-                        <a href="#" class="form-label">
+                        <a href="company_info_form.html" class="form-label">
                             <i class="fas fa-user-plus"></i> ADD CLIENT
                         </a>
                     </div>
@@ -69,7 +68,7 @@
                     </div>
                     
                     <div class="col-10">
-                        <input type="text" class="form-control" value="7 Jul" readonly>
+                        <input type="text" class="custom-input" value="Dated 7 Jul" readonly>
                     </div>
                 </div>
                 
@@ -80,7 +79,7 @@
                         <label class="form-label"><i class="far fa-clock"></i></label>
                     </div>
                     <div class="col-10">
-                        <input type="text" class="form-control" value="11 Jul, in 2 days" readonly>
+                        <input type="text" class="custom-input editable" placeholder="Purchase Oder" readonly>
                     </div>
                 </div>
         
@@ -90,7 +89,7 @@
                         <label class="form-label"><i class="fas fa-file-invoice"></i> </label>
                     </div>
                     <div class="col-10">
-                        <input type="text" class="form-control" value="INV-0002" readonly>
+                        <input type="text" class="custom-input" value="INV-0002" readonly>
                     </div>
                 </div>
         
@@ -100,7 +99,7 @@
                         <label class="form-label"><i class="fas fa-map-marker-alt"></i></label>
                     </div>
                     <div class="col-10">
-                        <input type="text" class="form-control" value="32 myall st concord" readonly>
+                        <input type="text" class="custom-input" value="32 myall st concord" readonly>
                     </div>
                 </div>
         
@@ -109,10 +108,10 @@
                 <!-- Description -->
                 <div class="row mb-3">
                     <div class="col-2 d-flex align-items-center justify-content-center">
-                        <label class="form-label"><i class="fas fa-info-circle"></i> </label>
+                        <label class="form-label"><i class="fa-regular fa-bookmark"></i></label>
                     </div>
                     <div class="col-10">
-                        <input type="text" class="form-control" value="Your description here" readonly>
+                        <input type="text" class="custom-input editable" placeholder="Your description here" >
                     </div>
                 </div>
 
@@ -128,36 +127,74 @@
                     </div>
                 </div>
         
+                <hr>
+
+                 <!-- Total Due -->
+                 <div class="row mb-3">
+                    <div class="col-12">
+                        <label class="form-label">Job Details:</label>
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="custom-input" class="form-control" value="55.00" >
+                    </div>
+                </div>
+        <hr/>
+
                 <!-- Total Due -->
                 <div class="row mb-3">
-                    <div class="col-3">
-                        <label class="form-label"><i class="fas fa-dollar-sign"></i> Total due</label>
+                    <div class="col-6">
+                        <label class="form-label">Amount:   </label>
+                    
                     </div>
-                    <div class="col-9">
-                        <input type="text" class="form-control" value="55.00" readonly>
+                    <div class="col-6">
+                        <div class="input-group">
+                            <span class="input-group-text no-background"><i class="fas fa-dollar-sign"></i></span>
+                            <input type="text" class="custom-input form-control text-right editable" placeholder="Enter Amount">
+                        </div>
+                    </div>
+                    
+                    
+
+                    <div class="col-6">                       
+                        <label class="form-label">GST :</label>
+                    </div>
+                    <div class="col-6">    
+                        <div class="input-group">
+                            <span class="input-group-text no-background"><i class="fas fa-dollar-sign"></i></span>
+                            <input type="text" class="custom-input form-control text-right editable" value="0.00"readonly>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label class="form-label">Total Due: </label>
+                    
+                    </div>
+                    <div class="col-6">
+                        <div class="input-group">
+                            <span class="input-group-text no-background"><i class="fas fa-dollar-sign"></i></span>
+                            <input type="text" class="custom-input form-control text-right editable" value="0.00" readonly>
+                        </div>
+                      
                     </div>
                 </div>
         
-                <button type="submit" class="btn btn-primary w-100">Send Invoice</button>
+
         
                 <div class="row mt-3">
-                    <div class="col-4">
-                        <button type="submit" class="btn btn-danger btn-block">Delete</button>
+                    <div class="col-5">
+                        <button type="submit" class="btn btn-primary btn-block">Save</button>
                     </div>
-                    <div class="col-4">
-                        <button type="submit" class="btn btn-primary btn-block">Edit</button>
+                    <div class="col-2">
+                       
                     </div>
-                    <div class="col-4">
-                        <button type="submit" class="btn btn-success btn-block">Got Paid</button>
+                    <div class="col-5">
+                        <button type="submit" class="btn btn-success btn-block">Send</button>
                     </div>
                 </div>
             </fieldset>
         </form>
-        
-
-           
-           
-            <!-- <div style="margin: 20px 0px 300px 0px;"></div> -->
     </div>
 
   
