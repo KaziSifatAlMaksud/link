@@ -70,19 +70,46 @@ function filterCards() {
  });
 }
 
-// const title = document.getElementById('expandable-title');
-// let expanded = false;
 
-// title.addEventListener('click', () => {
-//     if (expanded) {
-//         title.style.whiteSpace = 'nowrap';
-//         title.style.overflow = 'hidden';
-//         title.style.textOverflow = 'ellipsis';
-//     } else {
-//         title.style.whiteSpace = 'normal';
-//         title.style.overflow = 'visible';
-//         title.style.textOverflow = 'unset';
-//     }
 
-//     expanded = !expanded;
-// });
+
+ // filter the catagory ..
+ document.addEventListener("DOMContentLoaded", function () {
+  const filters = document.querySelectorAll(".invoice-flters li");
+  const portfolioItems = document.querySelectorAll(".invoice-item");
+  
+  filters.forEach(function (filter) {
+   filter.addEventListener("click", function () {
+     filters.forEach(function (f) {
+       f.classList.remove("filter-active");
+       f.classList.add("filter-inactive");
+     });
+     this.classList.remove("filter-inactive");
+     this.classList.add("filter-active");
+  
+     const filterId = this.id;
+  
+     portfolioItems.forEach(function (item) {
+       item.style.display = "none";
+     });
+  
+     if (filterId === "filter-ready") {
+       document.querySelectorAll(".filter-ready").forEach(function (content) {
+         content.style.display = "block";
+       });
+     } else if (filterId === "filter-unpaid") {
+       document.querySelectorAll(".filter-unpaid").forEach(function (content) {
+         content.style.display = "block";
+       });
+     } else if (filterId === "filter-paid") {
+       document.querySelectorAll(".filter-paid").forEach(function (content) {
+         content.style.display = "block";
+       });
+     } else if (filterId === "filter-all") {
+       portfolioItems.forEach(function (item) {
+         item.style.display = "block";
+       });
+     }
+   });
+  });
+  });

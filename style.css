@@ -14,6 +14,13 @@
     --body-bg: #ebebeb;
     --nav-colo: #fff;
     --orang: #f47a08;
+    --bg-orang: #ffddaa;
+    --newInvoice-bg: #66ff5b;
+    --dueInvoice-bf:#ff7070;
+    --yollo: #f9f14d;
+    --bg-yollo: #fffcb4;
+    --green: #17ff21;
+    --bg-green: #b8ffc3;
 }
 
 body {
@@ -23,8 +30,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
     width: 100%;
-    background: var(--body-bg);
+    /* background: var(--body-bg); */
     overflow-x: hidden; 
+    background-color: #222327;
 }
 
 .container {
@@ -33,6 +41,7 @@ body {
     padding: 5px;
     align-items: center;
     background: var(--body-bg);
+ 
 }
 @media (max-width: 400px) {
     .container {
@@ -114,9 +123,10 @@ body {
      
 }
 .card-body1 .row{
-    font-weight: bold;
+
     margin: 0px 2px 0px 0px;
 }
+
 
 
 
@@ -301,7 +311,6 @@ body {
     color: #fff !important;
     font-weight: bold;
     font-size: 17px;
-    padding: 2px 25px 2px 25px;
     border: 2px solid var(--bg);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -416,3 +425,272 @@ body {
 #results li {
     margin: 5px 0;
 }
+
+
+/* ##########################
+####  Invoices Page Main #### 
+##############################*/
+
+.invoice-flters {
+    margin-top: 140px;
+    background-color: #d9d9d9;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+    border-radius: 40px;
+    border: 3px solid #fff;
+  }
+  
+.invoice-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 3.8% 0 3.8%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 10px;
+    line-height: 1;
+    transition: all 0.3s ease-in-out;
+  }
+
+
+  
+ /* .invoice-flters li:hover, */
+.invoice-flters li.filter-active {
+    background-color: #f47a08;
+    padding: 5px 10px 5px 10px;
+    border-radius: 40px;
+    border: 3px solid #fff;
+  }
+  
+.invoice-flters li:first-child {
+    margin-left: 0px;
+  }
+  
+.invoice-flters li:last-child {
+    margin-right: 0px;
+  }
+/* Style for the newInvoice bar container */
+.newInvoice-bar {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    border: 3px solid #fff;
+    background-color: var(--newInvoice-bg);
+    border-radius: 40px;
+    padding: 8px 5px 5px 5px;
+    width: 100%;
+}
+
+.newInvoice-link {
+    text-decoration: none; 
+    border: none;
+    outline: none;
+    width: 100%;
+    font-weight: bold;
+    color: var(--bg);
+    background-color: var(--newInvoice-bg);
+    display: block; 
+    text-align: center;
+    padding: 0; 
+    margin: 0;
+    border-radius: 40px; 
+    font-size: 20px;
+}
+
+.newInvoice-link:hover{
+    text-decoration: none; 
+    border: none;
+    outline: none;
+    width: 100%;
+    font-weight: bold;
+    color: var(--bg);
+    background-color: var(--newInvoice-bg);
+    display: block; 
+    text-align: center;
+    padding: 0; 
+    margin: 0;
+    border-radius: 40px; 
+    font-size: 20px;
+}
+
+.dueInvoice-bar {
+    position: relative;
+    padding-right: 40px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    border: 3px solid #fff;
+    background-color: var(--dueInvoice-bf);
+    border-radius: 40px;
+    padding: 8px 5px 5px 5px;
+    width: 100%;
+}
+
+.dueInvoice-link {
+    text-decoration: none; 
+    border: none;
+    outline: none;
+    width: 100%;
+    font-weight: bold;
+    color: var(--bg);
+    background-color: var(--dueInvoice-bf);
+    display: block; 
+    text-align: center;
+    padding: 0; 
+    margin: 0;
+    border-radius: 40px; 
+    font-size: 20px;
+}
+
+.dueInvoice-link:hover{
+    text-decoration: none; 
+    border: none;
+    outline: none;
+    width: 100%;
+    font-weight: bold;
+    color: var(--bg);
+    background-color: var(--dueInvoice-bf);
+    display: block; 
+    text-align: center;
+    padding: 0; 
+    margin: 0;
+    border-radius: 40px; 
+    font-size: 20px;
+}
+.notification-button{
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    padding: 2px 12px 2px 12px;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: var(--body-bg);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    
+}
+
+.InvoicePortfolio{
+    padding: 10px 5px 0px 5px!important;
+}
+
+.cardhaderInvoice-link {
+    text-decoration: none; 
+    border: none;
+    outline: none;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--clr);
+    background-color: var(--bg-orang);
+    display: block; 
+    text-align: center;
+    padding: 1.3px 0px .1px 0px; 
+    margin: 0;
+    border-radius: 40px; 
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.notification-button{
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    padding: 2px 12px 2px 12px;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: var(--body-bg);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    
+}
+.invoiceReadynotification-button{
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    margin: 10px 5px 0px 0px!important;
+    padding: 2px 12px 2px 12px;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--bg);
+    background-color: var(--orang);
+    border: 2px solid #fff;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    
+}
+/*for uppaid invoice*/
+.cardhaderInvoice-unpaid{
+    text-decoration: none; 
+    border: none;
+    outline: none;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--clr);
+    background-color: var(--bg-yollo);
+    display: block; 
+    text-align: center;
+    padding: 1.3px 0px .1px 0px; 
+    margin: 0;
+    border-radius: 40px; 
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); 
+
+}
+.invoiceReadynotification-unpaid{
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    margin: 10px 5px 0px 0px!important;
+    padding: 2px 12px 2px 12px;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--clr);
+    background-color: var(--yollo);
+    border: 2px solid #fff;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+/*end for uppaid invoice*/
+
+/*for paid invoice*/
+.cardhaderInvoice-paid{
+    text-decoration: none; 
+    border: none;
+    outline: none;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--clr);
+    background-color: var(--bg-green);
+    display: block; 
+    text-align: center;
+    padding: 1.3px 0px .1px 0px; 
+    margin: 0;
+    border-radius: 40px; 
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); 
+
+}
+.invoiceReadynotification-paid{
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    margin: 10px 5px 0px 0px!important;
+    padding: 2px 12px 2px 12px;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--clr);
+    background-color: var(--green);
+    border: 2px solid #fff;
+    border-radius: 40px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+/*end for uppaid invoice*/
+
+
+/* Style for the newInvoice bar container */
+
+/* ##########################
+####  End Invoices Page Main #### 
+##############################*/
+
+/* Pofile Page */
