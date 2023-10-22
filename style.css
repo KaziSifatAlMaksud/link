@@ -43,21 +43,21 @@ body {
 }
 
 .container {
-    max-width: 400px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 5px;
     align-items: center;
     background: var(--body-bg);
  
 }
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
     .container {
         max-width: 100%; 
         text-align: center;
       }
       
     
-  }
+  } */
 
 .header-container {
     display: flex;
@@ -71,7 +71,6 @@ body {
 }
 
 .header-content {
-    max-width: 400px; 
     display: flex;
     background: var(--body-bg);
     justify-content: space-between;
@@ -85,7 +84,7 @@ body {
 /*Card Style*/
 .card{
     border-radius: 15px;
-    padding-bottom: 15px;
+    /* padding-bottom: 15px; */
     margin: 20px 5px 0px 5px;
     max-width: 100%;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); 
@@ -181,11 +180,15 @@ body {
 
 }
 
+/* Navigation Update*/
+
 .navigation {
+    display: flex;
+    justify-content: flex-end;
     position: fixed;
     align-items: center; 
     justify-content: end; 
-    max-width: 400px;
+    width: 100%;
     bottom: 0;
     background: var(--nav-colo);
     border-radius: 20px 20px 0px 0px;
@@ -200,7 +203,7 @@ body {
 .navigation ul li{    
     position: relative;
     list-style: none;
-    width: 100px;
+    width: 30%;
     height: 70px;
     z-index: 1;
 }
@@ -225,7 +228,16 @@ body {
 
 }
 .navigation ul li.active a .icon{
-    transform: translateY(-32px);
+    transform: translateY(-42px);
+    background-color: #f47a08;
+    padding: 0px 25px 0px 25px;
+    background: var(--orang);
+    border-radius: 50%; 
+    font-size: 20px;
+    box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.2);  
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    border: 6px solid var(--body-bg);
+    transition: 0.5s;
 
 }
 
@@ -244,38 +256,15 @@ body {
     transform: translateY(10px);
 }
 
-.indicator{
-    position: absolute;
-    transform: translateY(-50%);
-    width: 70px;
-    height: 70px; 
-    background: var(--orang);
-    border-radius: 50%; 
-    box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.2);  
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
-    border: 6px solid var(--body-bg);
-    transition: 0.5s;
-}
-.navigation ul li:nth-child(1).active ~ .indicator {
-    transform: translateX(calc(15px * 1)) translateY(-50%);
-}
+/* Navigation End Update*/
 
-.navigation ul li:nth-child(2).active ~ .indicator {
-    transform: translateX(calc(115px * 1)) translateY(-50%);
-}
 
-.navigation ul li:nth-child(3).active ~ .indicator {
-    transform: translateX(calc(107px * 2)) translateY(-50%);
-}
 
-.navigation ul li:nth-child(4).active ~ .indicator {
-    transform: translateX(calc(105px * 3)) translateY(-50%);
-}
 
 .reduced-line-height {
     margin-top: 6px;
     line-height: 1.00; /* You can adjust this value as needed */
-}
+} 
 
 .card-text{
     margin: 0px 0px 10px 10px;
@@ -327,7 +316,7 @@ body {
 
 /* Portfolio flters*/
 
-.filter{
+/* .filter{
     position: relative;
     margin-top: 10px;
     width: 100%;
@@ -353,12 +342,46 @@ body {
     margin: 0 10px;
     line-height: 1;
     transition: all 0.3s ease-in-out;
-  }
+  } */
+  .filter {
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.portfolio-flters {
+    margin-top: 140px;
+    background-color: #d9d9d9;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+    border-radius: 40px;
+    border: 3px solid #fff;
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Distribute items evenly */
+    padding: 0; /* Remove padding */
+}
+
+.portfolio-flters li {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px 10px 5px 10px;
+    font-weight: bold;
+    margin: 0 10px;
+    line-height: 1;
+    transition: all 0.3s ease-in-out;
+    flex: 1; /* Distribute space evenly */
+    text-align: center;
+}
 
 
   
  /* .portfolio-flters li:hover, */
 .portfolio-flters li.filter-active {
+   
+    
     background-color: #f47a08;
     padding: 5px 10px 5px 10px;
     border-radius: 40px;
